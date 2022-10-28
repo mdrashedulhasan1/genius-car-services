@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Service from '../Service/Service';
-
+import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {
@@ -12,10 +12,12 @@ const Services = () => {
     }, [])
     return (
         <div>
-            <h1>Total Servicing car: {services.length}</h1>
-            {
-                services.map(service => <Service key={service.id} service={service}></Service>)
-            }
+            <h1 style={{textAlign:'center'}}>Car Service: {services.length}</h1>
+            <div className='services-container'>
+                {
+                    services.map(service => <Service key={service.id} service={service}></Service>)
+                }
+            </div>
         </div>
     );
 };

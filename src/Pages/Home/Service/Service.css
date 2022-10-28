@@ -1,0 +1,8 @@
+.service-container img{
+    width: 100%;
+}
+.service-container{
+    border:2px solid red;
+    padding-bottom: 5px;
+    text-align: center;
+}
